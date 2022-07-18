@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "133978387450",
+    "project_id": "fir-example-79116",
+    "storage_bucket": "fir-example-79116.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133978387450:android:95e4963a12be1efbf62a43",
+        "android_client_info": {
+          "package_name": "com.example.rogami_rogami"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133978387450-r70scqtcn8sabdgaa6qbfrl985rfo56r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAiwrpqT9a8Izu_DZNs1FsUg4z38GH29s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133978387450-r70scqtcn8sabdgaa6qbfrl985rfo56r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
