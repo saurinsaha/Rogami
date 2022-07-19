@@ -4,13 +4,18 @@ import 'package:rogami_rogami/views/client_registration_page_1.dart';
 
 import '../controllers/auth_controller.dart';
 
-class ClientLoginPage extends StatelessWidget {
+class ClientLoginPage extends StatefulWidget {
   const ClientLoginPage({Key? key}) : super(key: key);
 
   @override
+  State<ClientLoginPage> createState() => _ClientLoginPageState();
+}
+
+class _ClientLoginPageState extends State<ClientLoginPage> {
+  final TextEditingController emailController = TextEditingController(), passwordController = TextEditingController();
+
+  @override
   Widget build(BuildContext context) {
-    var emailController = TextEditingController();
-    var passwordController = TextEditingController();
     return Scaffold(
         appBar: AppBar(
             leading: IconButton(
@@ -48,18 +53,20 @@ class ClientLoginPage extends StatelessWidget {
                 SizedBox(
                   height: 80,
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                  child: TextField(
+                  child: TextFormField(
+                    controller: emailController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       hintText: 'Email address',
                     ),
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-                  child: TextField(
+                  child: TextFormField(
+                    controller: passwordController,
                     obscureText: true,
                     enableSuggestions: false,
                     autocorrect: false,
@@ -88,11 +95,9 @@ class ClientLoginPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-
-                      // AuthController.instance.register(emailController.text.trim(),
-                      //     passwordController.text.trim());
+                    // AuthController.instance.register(emailController.text.trim(),
+                    //     passwordController.text.trim());
                     Get.offAll(ClientRegistrationPage1());
-
                   },
                   child: ListTile(
                     tileColor: Colors.black,

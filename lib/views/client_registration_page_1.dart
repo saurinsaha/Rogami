@@ -18,25 +18,25 @@ class ClientRegistrationPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(Icons.arrow_back),
-            color: Colors.black,
-          ),
-          actions: [
-            Container(
-              margin: const EdgeInsets.only(top: 22,right: 20),
-              child: Text('Step 1 of 3', style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Colors.black
-              ),),
-            )
-          ],
-          backgroundColor: Colors.white,
-          elevation: 0),
+        appBar: AppBar(
+            leading: IconButton(
+              onPressed: () {
+                Get.back();
+              },
+              icon: Icon(Icons.arrow_back),
+              color: Colors.black,
+            ),
+            actions: [
+              Container(
+                margin: const EdgeInsets.only(top: 22, right: 20),
+                child: Text(
+                  'Step 1 of 3',
+                  style: TextStyle(fontWeight: FontWeight.w400, color: Colors.black),
+                ),
+              )
+            ],
+            backgroundColor: Colors.white,
+            elevation: 0),
         body: SingleChildScrollView(
           child: Container(
             margin: const EdgeInsets.all(20),
@@ -68,23 +68,18 @@ class ClientRegistrationPage1 extends StatelessWidget {
                   child: TextFormField(
                     controller: companyNameController,
                     decoration: InputDecoration(
-                      hintText: 'Name of company',
-                      hintStyle: TextStyle(color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: new BorderRadius.circular(5.0),
-                        borderSide: BorderSide(
-                          color: Colors.black
+                        hintText: 'Name of company',
+                        hintStyle: TextStyle(color: Colors.black),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: new BorderRadius.circular(5.0),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: new BorderRadius.circular(5.0),
-                        borderSide: BorderSide(
-                          color: Colors.black
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: new BorderRadius.circular(5.0),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
-                      ),
-                      // isDense: true,
-                      contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)
-                    ),
+                        // isDense: true,
+                        contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)),
                     cursorColor: Colors.black,
                     style: TextStyle(color: Colors.black),
                   ),
@@ -99,19 +94,14 @@ class ClientRegistrationPage1 extends StatelessWidget {
                         hintStyle: TextStyle(color: Colors.black),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: new BorderRadius.circular(5.0),
-                          borderSide: BorderSide(
-                              color: Colors.black
-                          ),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: new BorderRadius.circular(5.0),
-                          borderSide: BorderSide(
-                              color: Colors.black
-                          ),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         // isDense: true,
-                        contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)
-                    ),
+                        contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)),
                     cursorColor: Colors.black,
                     style: TextStyle(color: Colors.black),
                   ),
@@ -126,19 +116,14 @@ class ClientRegistrationPage1 extends StatelessWidget {
                         hintStyle: TextStyle(color: Colors.black),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: new BorderRadius.circular(5.0),
-                          borderSide: BorderSide(
-                              color: Colors.black
-                          ),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: new BorderRadius.circular(5.0),
-                          borderSide: BorderSide(
-                              color: Colors.black
-                          ),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         // isDense: true,
-                        contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)
-                    ),
+                        contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)),
                     cursorColor: Colors.black,
                     style: TextStyle(color: Colors.black),
                   ),
@@ -153,19 +138,14 @@ class ClientRegistrationPage1 extends StatelessWidget {
                         hintStyle: TextStyle(color: Colors.black),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: new BorderRadius.circular(5.0),
-                          borderSide: BorderSide(
-                              color: Colors.black
-                          ),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: new BorderRadius.circular(5.0),
-                          borderSide: BorderSide(
-                              color: Colors.black
-                          ),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         // isDense: true,
-                        contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)
-                    ),
+                        contentPadding: EdgeInsets.fromLTRB(14, 16, 206, 16)),
                     cursorColor: Colors.black,
                     style: TextStyle(color: Colors.black),
                   ),
@@ -174,12 +154,11 @@ class ClientRegistrationPage1 extends StatelessWidget {
                 GestureDetector(
                   // onTap:
                   onTap: () {
-
                     // AuthController.instance.register(emailController.text.trim(),
                     //     passwordController.text.trim());
-                     Get.offAll(ClientRegistrationPage2());
-                     // registerPage1();
-                  //
+                    Get.offAll(ClientRegistrationPage2());
+                    // registerPage1();
+                    //
                   },
                   child: ListTile(
                     tileColor: Colors.black,
@@ -222,40 +201,35 @@ class ClientRegistrationPage1 extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.fromLTRB(110, 10, 0, 0),
                   child: Row(
-
-                      children: [
-
-                        Text(
-                          "Have an account?",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(fontWeight: FontWeight.w300),
-                        ),
-
-                        Text(
-                          "Login",
-
-                          textAlign: TextAlign.left,
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-
+                    children: [
+                      Text(
+                        "Have an account?",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(fontWeight: FontWeight.w300),
+                      ),
+                      Text(
+                        "Login",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
           ),
-        )
-    );
+        ));
   }
   // void registerPage1(){
   //   controller.registerPage1(nameOfCompany.text, email.text, password.text, numberOfAdmins.text);
   // }
 
   void registerClientFromPage1() {
-    AuthController.instance.registerClientFromPage1(companyNameController.text.trim(),emailController.text.trim(),
-        passwordController.text.trim(),adminNumber.text.trim());
+    AuthController.instance.registerClientFromPage1(
+        uid: "",
+        company: companyNameController.text.trim(),
+        email: emailController.text.trim(),
+        password: passwordController.text.trim(),
+        adminNumber: adminNumber.text.trim());
   }
 }
-
-
-

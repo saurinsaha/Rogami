@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rogami_rogami/views/admin_login_page.dart';
 import 'package:rogami_rogami/views/welcome_page.dart';
 
 class AuthController extends GetxController {
@@ -30,8 +29,7 @@ class AuthController extends GetxController {
 
   void register(String email, password) async {
     try {
-      await auth.createUserWithEmailAndPassword(
-          email: email, password: password);
+      await auth.createUserWithEmailAndPassword(email: email, password: password);
     } catch (e) {
       Get.snackbar("About User", "User message",
           backgroundColor: Colors.grey,
@@ -47,15 +45,10 @@ class AuthController extends GetxController {
     }
   }
 
-  void registerClientFromPage1(String company, String email, String password, String adminNumber){
+  void registerClientFromPage1({required String uid, required String company, required String email, required String password, required String adminNumber}) {
     CollectionReference reference = FirebaseFirestore.instance.collection("ClientUser");
-    Map <String,String> userdata = {
-      "Name of company": company,
-      "Email": email,
-      "password": password,
-      "Number of admins": adminNumber
-    };
+    Map<String, String> userdata = {"Name of company": company, "Email": email, "password": password, "Number of admins": adminNumber};
+    reference.doc(uid).set(userdata);
     print("register page kortase");
   }
-
 }
